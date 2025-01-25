@@ -2,13 +2,95 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://apis.google.com https://www.gstatic.com 'unsafe-inline';">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Portfolio Showcase</title>
+    <link rel="stylesheet" href="src/assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>This is the beginning of something great!</p>
-    <script src="script.js"></script>
+    <nav class="navbar">
+        <div class="logo">Your Brand</div>
+        <div class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#work">Work</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="quote-section">
+            <div class="quote-container">
+                <h1 class="quote-text">
+                    "Transforming ideas into digital excellence"
+                </h1>
+                <p class="quote-subtitle">
+                    Creating meaningful experiences through innovative design
+                </p>
+            </div>
+        </section>
+
+        <!-- Carousel Section -->
+        <section id="work" class="carousel-section">
+            <h2>Featured Work</h2>
+            <div class="carousel-container">
+                <div class="swiper" id="carousel">
+                    <div class="swiper-wrapper" id="carousel-slides">
+                        <!-- Slides will be dynamically added here -->
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- Contact Section -->
+        <!-- <section id="contact" class="contact-section">
+            <div class="contact-container">
+                <h2>Contact Us</h2>
+                <form id="contact-form" action="https://formspree.io/f/xeoeodny" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                    <label for="phone">Contact No:</label>
+                    <textarea id="phone" name="phone" placeholder="Contact Number" required></textarea>
+        
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+        
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+        
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section> -->
+        
+
+        <section id="contact" class="contact-section">
+            <div class="contact-container">
+                <h2>Contact Us</h2>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf_4mjip601BeAhTjqIrqugHciEJwfKs4zjK5tNMW6h2u4ONw/viewform?embedded=true" width="640" height="780" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Your Brand. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="src/assets/js/script.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
 </body>
 </html>
