@@ -50,6 +50,15 @@ main {
     color: var(--primary);
 }
 
+.logo img {
+    width: 70px; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra spacing */
+    margin: 0 auto;
+    border-radius: 50px;
+}
+
+
 .nav-links {
     display: flex;
     gap: 2rem;
@@ -243,6 +252,10 @@ footer {
         --container-padding: 1rem;
     }
 
+    .logo img {
+        max-width: 55px; /* Adjust logo size for tablets */
+    }
+
     .nav-links {
         display: none;
         position: fixed;
@@ -295,6 +308,10 @@ footer {
 
     .work-link {
         width: 80px;
+    }
+
+    .logo img {
+        max-width: 50px; /* Adjust logo size for tablets */
     }
 
     .work-link img {
