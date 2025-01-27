@@ -83,7 +83,7 @@ main {
 }
 
 .quote-text {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     font-weight: 600;
     color: var(--primary);
     margin-bottom: 1.5rem;
@@ -96,70 +96,62 @@ main {
     opacity: 0.8;
 }
 
-/* Carousel Section */
-.carousel-section {
+/* Work Section */
+.work-section {
     padding: 4rem var(--container-padding);
-    background: white;
+    background: var(--background);
+    text-align: center;
 }
 
-.carousel-section h2 {
-    text-align: center;
-    margin-bottom: 3rem;
+.work-section h2 {
     font-size: 2.5rem;
+    margin-bottom: 2rem;
     color: var(--primary);
 }
 
-.carousel-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.swiper {
-    width: 100%;
-    padding: 2rem 0;
-    height: 400px;
-}
-
-.swiper-slide {
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px var(--shadow);
-    overflow: hidden;
-    transition: transform 0.3s ease;
+.work-links-container {
     display: flex;
     justify-content: center;
+    gap: 3rem; /* Increased spacing between links */
+    flex-wrap: wrap;
+}
+
+.work-link {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    height: 100%;
+    text-decoration: none;
+    color: var(--text);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 180px;
+    padding: 1rem; /* Added padding for better spacing inside the border */
+    border-radius: 12px; /* Rounded corners for the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for reflection */
+    background-color: var(--background-light); /* Optional: Adds contrast for the card */
 }
 
-.swiper-slide:hover {
-    transform: translateY(-10px);
+.work-link:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
 }
 
-.swiper-slide img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+.work-link img {
+    width: 80px;
+    height: 80px;
     margin-bottom: 1rem;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px var(--shadow);
 }
 
-.swiper-slide p {
-    font-size: 1rem;
+.work-link p {
+    margin: 0;
+    font-size: 1.1rem;
     color: var(--secondary);
-    text-align: center;
-    margin-top: 0.5rem;
+    font-weight: 600;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-    color: var(--accent);
-}
 
-.swiper-pagination-bullet-active {
-    background: var(--accent);
-}
+
 
 /* Contact Section */
 .contact-section {
@@ -213,19 +205,12 @@ main {
     background: #0078d4;
 }
 
-
 .contact-container iframe {
     max-width: 100%;
     border: none;
     height: 600px;
 }
 
-.contact-container {
-    padding: 20px;
-    text-align: center;
-}
-
-/* Footer */
 footer {
     padding: 2rem;
     text-align: center;
@@ -249,12 +234,6 @@ footer {
     background-color: var(--secondary);
     border-radius: 5px;
     transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-/* Hamburger animation when active */
-.hamburger.active div {
-    transform: none;
-    opacity: 1;
 }
 
 /* Responsive Navbar */
@@ -287,13 +266,21 @@ footer {
     .hamburger {
         display: flex;
     }
-
-    .quote-text {
-        font-size: 2.5rem;
+    .work-links-container {
+        gap: 2rem; /* Slightly reduced spacing for smaller screens */
     }
 
-    .quote-subtitle {
-        font-size: 1.2rem;
+    .work-link {
+        width: 120px;
+    }
+
+    .work-link img {
+        width: 70px; /* Reduced icon size for smaller screens */
+        height: 70px;
+    }
+
+    .work-link p {
+        font-size: 1rem;
     }
 }
 
@@ -306,8 +293,21 @@ footer {
         font-size: 1rem;
     }
 
-    .swiper-slide img {
-        max-width: 100%;
+    .work-link {
+        width: 80px;
+    }
+
+    .work-link img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .work-link:hover {
+        transform: translateY(-6px);
+    }
+
+    .work-link:hover img {
+        transform: scale(1.05);
     }
 }
 
