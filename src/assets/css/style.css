@@ -99,6 +99,16 @@ main {
     text-align: center;
 }
 
+
+.highlight {
+    background-color: #ffea2e; /* Lighter yellow highlight */
+    color: #c06940; /* Text color */
+    padding: 0.1em; /* Reduced padding for smaller height */
+    border-radius: 4px;
+    line-height: 1.1; /* Adjusted line height */
+}
+
+
 .quote-subtitle {
     font-size: 1.5rem;
     color: var(--secondary);
